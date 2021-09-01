@@ -1,46 +1,38 @@
 package com.bridgelabz.EmpWageProblemOops;
 
 public class EmployeeWageProblemOops {
-
-	public double isPresent() {
+	int wagePerHrs=20;
+	int dailyWage;
+		public static void main(String[] args) {
 		
-		int isPresent=1;
-		double randomCheck = (int) (Math.floor(Math.random()*10)%2);
-		if(isPresent == randomCheck)
-		{
-			System.out.println("Employee is Present");
+			int randomCheck = (int) (Math.floor(Math.random()*10)%3);
+			System.out.println(randomCheck);
+			 EmployeeWageProblemOops obj=new EmployeeWageProblemOops();
+			 obj.wageCal(randomCheck);
+			
 			
 		}
-		else {
-		
-			System.out.println("Employee is Abscent");
+		public void wageCal(int randomCheck) {
+			int dailyWage=0;
+			
+		switch(randomCheck) {
+			   case 1:
+			   {
+					int halfTimeHrs=4;
+					dailyWage=wagePerHrs*halfTimeHrs;
+					System.out.println("DailyWage:"+dailyWage);
+					break;
+			   }
+			   case 2:
+			   {
+					int fullTimeHrs=8;
+					dailyWage=wagePerHrs*fullTimeHrs;
+					System.out.println("DailyWage:"+dailyWage);
+					break;
+			   }
+			   
 		}
-		return(isPresent);
-	 }
-     public void dailyWage(double check) {
-		int wagePerHrs=20;
-		int dailyWage;
-		 int FullTimeHrs=8;
-		    dailyWage=wagePerHrs*FullTimeHrs;
-		   System.out.println("DailyWage:"+dailyWage);
-	}
-
-       public void partTime() {
-    	   int wagePerHrs=20;
-   		int partTime;
-   		 int FullTimeHrs=4;
-   		    partTime=wagePerHrs*FullTimeHrs;
-   		   System.out.println("partTime:"+partTime);
-   	}
-
-
-       public static void main(String[] args) {
-		EmployeeWageProblemOops obj = new EmployeeWageProblemOops();
-		 double check = obj.isPresent();
-		 obj.dailyWage(0);
-		obj.partTime();
-	}
-
-	 }
-	 
+		}
+}
+	
 
