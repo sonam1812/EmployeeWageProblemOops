@@ -17,7 +17,7 @@ public class EmployeeWageProblemOops {
 		}
 		return(isPresent);
 	 }
-		public void dailyWage(double check) {
+     public void dailyWage(double check) {
 		int wagePerHrs=20;
 		int dailyWage;
 		 int FullTimeHrs=8;
@@ -25,12 +25,20 @@ public class EmployeeWageProblemOops {
 		   System.out.println("DailyWage:"+dailyWage);
 	}
 
+       public void partTime() {
+    	   int wagePerHrs=20;
+   		int partTime;
+   		 int FullTimeHrs=4;
+   		    partTime=wagePerHrs*FullTimeHrs;
+   		   System.out.println("partTime:"+partTime);
+   	}
 
 
-	 public static void main(String[] args) {
+       public static void main(String[] args) {
 		EmployeeWageProblemOops obj = new EmployeeWageProblemOops();
 		 double check = obj.isPresent();
 		 obj.dailyWage(0);
+		obj.partTime();
 	}
 
 	 }
