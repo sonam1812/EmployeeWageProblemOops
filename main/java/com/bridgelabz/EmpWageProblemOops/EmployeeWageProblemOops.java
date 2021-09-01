@@ -30,7 +30,9 @@ public class EmployeeWageProblemOops {
 					System.out.println("DailyWage:"+dailyWage);
 					break;
 			   }
-			   
+			default: {
+			wagePerHrs=0;
+					}   
 		}
 		}
 }
