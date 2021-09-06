@@ -1,29 +1,29 @@
 package com.bridgelabz.EmpWageProblemOops;
 
-public class UseCase8 {
+public class UC9SaveTotalWage {
 
-	private final int wagePerHrs;
-	public static final int workHrs = 0;
+	private int wagePerHrs;
 	public static final int isPartTime=1;
 	public static final int isFullTime=2;
-	private final int numWorkingDays;
-	public static final int day=0;
-	public static final int hrs=0;
-	private final int totalMonthlyHrs;
-	private final String company;
-	
+	private int numWorkingDays;
+	private int totalMonthlyHrs;
+	private String company;
+	private int totalWage;
 	
 	public static void main(String[] args) {
-	    UseCase8 wipro=new UseCase8("wipro",20,2,10);
-		System.out.println("Total wage for Company:"+ wipro.company +" "+wipro.wageCal());
-		UseCase8 tcs=new UseCase8("tcs",40,3,20);
-		System.out.println("Total Wage for Company:"+ tcs.company +" "+tcs.wageCal());
-		UseCase8 hcl=new UseCase8("hcl",30,4,40);
-		System.out.println("Total Wage for Company:"+ hcl.company +" "+hcl.wageCal());
+	    UC9SaveTotalWage wipro=new UC9SaveTotalWage("wipro",20,2,10);
+	    wipro.wageCal();
+		System.out.println(wipro);
+		UC9SaveTotalWage tcs=new UC9SaveTotalWage("tcs",40,3,20);
+		tcs.wageCal();
+		System.out.println(tcs);
+		UC9SaveTotalWage hcl=new UC9SaveTotalWage("hcl",30,4,40);
+		hcl.wageCal();
+		System.out.println(hcl);
 			}
 
 
-	public UseCase8 (String company, int wagePerHrs, int numWorkingDays, int totalMonthlylHrs) 
+	public UC9SaveTotalWage(String company, int wagePerHrs, int numWorkingDays, int totalMonthlylHrs) 
 	{
 		this.company = company;
 		this.wagePerHrs = wagePerHrs;
@@ -59,9 +59,15 @@ public class UseCase8 {
 		hrs=hrs+workHrs;
 		System.out.println(hrs);
 	}
-	int totalWage=wagePerHrs*hrs;
+ int totalWage=wagePerHrs*hrs;
 	return totalWage;
 }
+		//override
+		public String toString() {
+		
+			return "Total Emp wage for Company : " +company+ " is " +totalWage;
+		}
+		
 }
 
 		
